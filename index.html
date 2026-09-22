@@ -427,6 +427,18 @@
     text-align: center;
   }
 
+  @media (min-width: 801px) {
+    .hero {
+      height: 100vh;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero {
+      height: 730px;
+    }
+  }
+
   .main-heading {
     position: absolute;
     top: 50%;
@@ -628,6 +640,7 @@
 
   .destinations {
     position: relative;
+    min-height: 70vh;
     background: #fff;
     color: #222;
     padding: 120px 24px;
@@ -645,7 +658,7 @@
     font-size: 1.1rem;
     font-weight: 300;
     opacity: 0.7;
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 
   .destination-cards {
@@ -658,7 +671,7 @@
   .destination-card {
     position: relative;
     flex: 1;
-    aspect-ratio: 584 / 829;
+    aspect-ratio: 584 / 879;
     height: auto;
     border-radius: 0;
     overflow: hidden;
@@ -699,27 +712,27 @@
     bottom: 0;
     width: 100%;
     padding: 40px;
-    text-align: left;
+    text-align: center;
     color: #fff;
   }
 
   .destination-card-name {
-    font-family: 'Symphony', 'Helvetica Neue', Arial, sans-serif;
-    font-size: 2.5rem;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
   }
 
   .destination-card-tagline {
     font-size: 1rem;
     font-weight: 300;
     opacity: 0.85;
-    margin-top: 8px;
+    margin-top: 4px;
   }
 
   .destination-card-cta {
     display: inline-block;
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 0.85rem;
     font-weight: 500;
     letter-spacing: 1px;
@@ -736,7 +749,19 @@
     }
 
     .destination-cards {
-      gap: 12px;
+      flex-direction: column;
+      gap: 0;
+      max-width: none;
+      width: calc(100% + 32px);
+      margin-left: -16px;
+      margin-right: -16px;
+    }
+
+    .destination-card {
+      flex: none;
+      width: 100%;
+      aspect-ratio: auto;
+      height: 440px;
     }
 
     .destination-card-content {
@@ -990,7 +1015,9 @@
 
     <div class="destination-cards">
       <a href="#" class="destination-card">
-        <img class="destination-card-image" src="https://i.pinimg.com/736x/e4/63/6a/e4636a5386697f0927841cdc8a7ab264.jpg" alt="Lonavala">
+        <video class="destination-card-image" autoplay muted loop playsinline>
+          <source src="assets/videos/lonavala.mp4" type="video/mp4">
+        </video>
         <div class="destination-card-overlay"></div>
         <div class="destination-card-content">
           <h3 class="destination-card-name">Lonavala</h3>
@@ -1000,7 +1027,9 @@
       </a>
 
       <a href="#" class="destination-card">
-        <img class="destination-card-image" src="https://i.pinimg.com/736x/34/6c/6d/346c6d00bf2440e87fa1ce611bddd23a.jpg" alt="Panchgani">
+        <video class="destination-card-image" autoplay muted loop playsinline>
+          <source src="assets/videos/panchgani.mp4" type="video/mp4">
+        </video>
         <div class="destination-card-overlay"></div>
         <div class="destination-card-content">
           <h3 class="destination-card-name">Panchgani</h3>
